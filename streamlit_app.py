@@ -64,7 +64,7 @@ def download_file(file_path):
                 counter = 0.0
                 MEGABYTES = 2.0 ** 20.0
                 while True:
-                    data = response.read(8192)
+                    data = response.read(8192) # Me, I think it's from Nginx webserver. (proxy buffer size)
                     if not data:
                         break
                     counter += len(data)
